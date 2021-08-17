@@ -5,9 +5,11 @@ import 'boxicons';
 import GlobalStyle from "./GlobalStyle";
 import ProductsPage from "./pages/ProductsPage";
 import Home from "./pages/Home";
+import { DataProvider } from "./context/DataProvider";
 
 function App() {
   return (
+    <DataProvider>
     <Router>
        <GlobalStyle/>
        <Switch>
@@ -19,6 +21,7 @@ function App() {
           </Route>
       </Switch>
     </Router>
+    </DataProvider>
   );
 }
 

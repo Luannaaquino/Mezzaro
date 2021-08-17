@@ -1,8 +1,15 @@
+import React, { useContext } from 'react';
 import 'boxicons';
 import styled from 'styled-components';
 import IMG from '../images/img01.jpg'
+import { DataContext } from '../context/DataProvider';
 
 export default function Prodcts() {
+
+    const value = useContext(DataContext);
+    const [produtos] = value.produtos;
+    console.log(produtos);
+
     return (
     <ProductsContainer>
       <h1 className="title">Produtos</h1>
