@@ -38,6 +38,8 @@ const HeaderContainer = styled.header`
   position: fixed;
   box-sizing: border-box;
   box-shadow: 0 5px 10px;
+  z-index: 2;
+  background-color: white;
 
   a{
     color: black;

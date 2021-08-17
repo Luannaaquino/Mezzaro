@@ -70,6 +70,7 @@ export default function Prodcts() {
 }
 
 const ProductsContainer = styled.header`
+    z-index: 0;
   .title{
       font-size: 2.4rem;
       padding: 10rem 0 0 0;
