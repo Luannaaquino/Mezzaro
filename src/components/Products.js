@@ -134,13 +134,13 @@ const ProductsContainer = styled.header`
 
     .product button{
         width: 100%;
-        height: 45px;
+        height: 55px;
         margin: 2px;
         grid-template-columns: 2fr 1fr;
         gap: 1 rem 2rem;
     }
 
-    .button .btn{
+    button{
         border: none;
         outline:0;
         cursor: pointer;
@@ -149,15 +149,15 @@ const ProductsContainer = styled.header`
 
     .buttom button{
         max-width: 250px;
-        margin: 0 auto;
+        
         font-size: 1.2rem;
         color: white;
         font-weight: 600;
+        border-radius: 5px;
     }
 
     .buttom{
-        background-color: #08a05c;
-        display: grid;
+        display: flex;
         align-items: center;
         margin-left: -2rem;
         border-radius: 5px;
@@ -175,10 +175,15 @@ const ProductsContainer = styled.header`
 
     .btn1{
         background-color: #3033d3;
+        cursor: pointer;
+        border: none;
     }
 
     .btn2{
         background-color:  #08a05c;
+        cursor: pointer;
+        border: none;
+        margin-top: 15px;
     }
 
 `;
