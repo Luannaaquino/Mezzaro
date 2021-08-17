@@ -75,8 +75,7 @@ const ProductsContainer = styled.header`
       font-size: 2.4rem;
       padding: 10rem 0 0 0;
       color: #08a05c;
-      font-family: Helvetica, sans-serif;
-      font-weight: bold;
+      font-family: 'Bebas Neue', cursive;
       margin-left: 35px;
   }
 
