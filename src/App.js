@@ -1,15 +1,20 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'boxicons';
+
 import GlobalStyle from "./GlobalStyle";
-import { Header } from "./components/Header";
-import Prodcts from './components/Products';
+import ProductsPage from "./pages/ProductsPage";
 
 function App() {
   return (
-    <>
-    <Header/>
-      <GlobalStyle/>
-      <Prodcts/>
-    </>
+    <Router>
+       <GlobalStyle/>
+       <Switch>
+          <Route path="/products" exact>
+            <ProductsPage />
+          </Route>
+      </Switch>
+    </Router>
   );
 }
 

@@ -64,6 +64,44 @@ export default function Prodcts() {
         </div>
         </div>
 
+        <div className="product">
+        <a href="#">
+            <div className="product_img">
+                <img src={IMG} alt="" width="150" />
+            </div>
+        </a>
+        <div className="product_footer">
+            <h1>Title</h1>
+            <p>Categoria</p>
+            <p className="price">$320</p>
+            <div className="buttom">
+                <button className="btn1">
+                    Adicionar ao Carrinho
+                </button>
+                <button className="btn2"><a href="#" className="btn">Vista</a></button>
+            </div>
+        </div>
+        </div>
+
+        <div className="product">
+        <a href="#">
+            <div className="product_img">
+                <img src={IMG} alt="" width="150" />
+            </div>
+        </a>
+        <div className="product_footer">
+            <h1>Title</h1>
+            <p>Categoria</p>
+            <p className="price">$320</p>
+            <div className="buttom">
+                <button className="btn1">
+                    Adicionar ao Carrinho
+                </button>
+                <button className="btn2"><a href="#" className="btn">Vista</a></button>
+            </div>
+        </div>
+        </div>
+
       </div>
     </ProductsContainer>
   );

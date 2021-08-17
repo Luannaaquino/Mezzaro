@@ -9,15 +9,17 @@ export const Header = () => {
 
   return (
     <HeaderContainer>
+      <Link to="/products">
       <div className="logo">
       <img src={Nike} alt="Nike" width="150" />
       </div>
+      </Link>
       <ul>
         <li>
-          <a heref="#">INíCIO</a>
+          <Link to="#">INíCIO</Link>
         </li>
         <li>
-          <a heref="#">PRODUTOS</a>
+          <Link to="/products">PRODUTOS</Link>
         </li>
       </ul>
       <div className="cart">
