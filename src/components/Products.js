@@ -18,13 +18,52 @@ export default function Prodcts() {
             <p>Categoria</p>
             <p className="price">$320</p>
             <div className="buttom">
-                <button className="btn">
+                <button className="btn1">
                     Adicionar ao Carrinho
                 </button>
-                <a href="#" className="btn">Vista</a>
+                <button className="btn2"><a href="#" className="btn">Vista</a></button>
             </div>
         </div>
         </div>
+
+        <div className="product">
+        <a href="#">
+            <div className="product_img">
+                <img src={IMG} alt="" width="150" />
+            </div>
+        </a>
+        <div className="product_footer">
+            <h1>Title</h1>
+            <p>Categoria</p>
+            <p className="price">$320</p>
+            <div className="buttom">
+                <button className="btn1">
+                    Adicionar ao Carrinho
+                </button>
+                <button className="btn2"><a href="#" className="btn">Vista</a></button>
+            </div>
+        </div>
+        </div>
+
+        <div className="product">
+        <a href="#">
+            <div className="product_img">
+                <img src={IMG} alt="" width="150" />
+            </div>
+        </a>
+        <div className="product_footer">
+            <h1>Title</h1>
+            <p>Categoria</p>
+            <p className="price">$320</p>
+            <div className="buttom">
+                <button className="btn1">
+                    Adicionar ao Carrinho
+                </button>
+                <button className="btn2"><a href="#" className="btn">Vista</a></button>
+            </div>
+        </div>
+        </div>
+
       </div>
     </ProductsContainer>
   );
@@ -35,6 +74,9 @@ const ProductsContainer = styled.header`
       font-size: 2.4rem;
       padding: 10rem 0 0 0;
       color: #08a05c;
+      font-family: Helvetica, sans-serif;
+      font-weight: bold;
+      margin-left: 35px;
   }
 
   .products{
@@ -92,7 +134,7 @@ const ProductsContainer = styled.header`
     .product button{
         width: 100%;
         height: 45px;
-        display: grid;
+        margin: 2px;
         grid-template-columns: 2fr 1fr;
         gap: 1 rem 2rem;
     }
@@ -105,7 +147,6 @@ const ProductsContainer = styled.header`
     }
 
     .buttom button{
-        background-color: #3033d3;
         max-width: 250px;
         margin: 0 auto;
         font-size: 1.2rem;
@@ -129,6 +170,14 @@ const ProductsContainer = styled.header`
 
     .buttom a:hover{
         color: white;
+    }
+
+    .btn1{
+        background-color: #3033d3;
+    }
+
+    .btn2{
+        background-color:  #08a05c;
     }
 
 `;
