@@ -10,7 +10,7 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <div className="logo">
-        <img src={Nike} alt="Nike" width="150" />
+      <img src={Nike} alt="Nike" width="150" />
       </div>
       <ul>
         <li>
