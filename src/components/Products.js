@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import 'boxicons';
 import styled from 'styled-components';
-import IMG from '../images/img01.jpg'
 import { DataContext } from '../context/DataProvider';
+import { Product } from './Product';
 
 export default function Prodcts() {
 
@@ -14,101 +14,11 @@ export default function Prodcts() {
     <ProductsContainer>
       <h1 className="title">Produtos</h1>
       <div className="products">
-          <div className="product">
-        <a href="#">
-            <div className="product_img">
-                <img src={IMG} alt="" width="150" />
-            </div>
-        </a>
-        <div className="product_footer">
-            <h1>Title</h1>
-            <p>Categoria</p>
-            <p className="price">$320</p>
-            <div className="buttom">
-                <button className="btn1">
-                    Adicionar ao Carrinho
-                </button>
-                <button className="btn2"><a href="#" className="btn">Vista</a></button>
-            </div>
-        </div>
-        </div>
-
-        <div className="product">
-        <a href="#">
-            <div className="product_img">
-                <img src={IMG} alt="" width="150" />
-            </div>
-        </a>
-        <div className="product_footer">
-            <h1>Title</h1>
-            <p>Categoria</p>
-            <p className="price">$320</p>
-            <div className="buttom">
-                <button className="btn1">
-                    Adicionar ao Carrinho
-                </button>
-                <button className="btn2"><a href="#" className="btn">Vista</a></button>
-            </div>
-        </div>
-        </div>
-
-        <div className="product">
-        <a href="#">
-            <div className="product_img">
-                <img src={IMG} alt="" width="150" />
-            </div>
-        </a>
-        <div className="product_footer">
-            <h1>Title</h1>
-            <p>Categoria</p>
-            <p className="price">$320</p>
-            <div className="buttom">
-                <button className="btn1">
-                    Adicionar ao Carrinho
-                </button>
-                <button className="btn2"><a href="#" className="btn">Vista</a></button>
-            </div>
-        </div>
-        </div>
-
-        <div className="product">
-        <a href="#">
-            <div className="product_img">
-                <img src={IMG} alt="" width="150" />
-            </div>
-        </a>
-        <div className="product_footer">
-            <h1>Title</h1>
-            <p>Categoria</p>
-            <p className="price">$320</p>
-            <div className="buttom">
-                <button className="btn1">
-                    Adicionar ao Carrinho
-                </button>
-                <button className="btn2"><a href="#" className="btn">Vista</a></button>
-            </div>
-        </div>
-        </div>
-
-        <div className="product">
-        <a href="#">
-            <div className="product_img">
-                <img src={IMG} alt="" width="150" />
-            </div>
-        </a>
-        <div className="product_footer">
-            <h1>Title</h1>
-            <p>Categoria</p>
-            <p className="price">$320</p>
-            <div className="buttom">
-                <button className="btn1">
-                    Adicionar ao Carrinho
-                </button>
-                <button className="btn2"><a href="#" className="btn">Vista</a></button>
-            </div>
-        </div>
-        </div>
-
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
       </div>
     </ProductsContainer>
   );
