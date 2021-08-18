@@ -110,7 +110,7 @@ const ProductsContainer = styled.header`
 
     .buttom button{
         max-width: 250px;
-        
+        margin-left: 32px;
         font-size: 1.2rem;
         color: white;
         font-weight: 600;
@@ -120,6 +120,7 @@ const ProductsContainer = styled.header`
     .buttom{
         display: flex;
         align-items: center;
+        justify-content: center;
         margin-left: -2rem;
         border-radius: 5px;
     }

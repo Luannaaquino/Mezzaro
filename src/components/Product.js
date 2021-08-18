@@ -22,7 +22,7 @@ export const Product = ({title, image, category, price, id}) => {
                 <button className="btn1">
                     Adicionar ao Carrinho
                 </button>
-                <button className="btn2"><a href="#" className="btn">Vista</a></button>
+                <button className="btn2"><a href="#" className="btn">Vistar</a></button>
             </div>
         </div>
         </div>
