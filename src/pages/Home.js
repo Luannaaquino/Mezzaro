@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { Header } from "../components/Header";
 import Inicio from "../images/Inicio.jpg"
+import Nikebanner from "../images/Nikebanner.jpg"
 
 export default function Home() {
     return (
@@ -18,6 +19,9 @@ export default function Home() {
             <Link to="/products"><button>Ver Calçados</button></Link>
             </div>
             <p>*Promoção válida até às 23:59 do dia 31/05</p>
+            <div className="banner2">
+            <Link to="/products"><img src={Nikebanner} alt="Banner"/></Link>
+            </div>
          </InicioContainer>
         </>
     )
@@ -79,6 +83,11 @@ const InicioContainer = styled.header`
 
     h2{
         font-size: 18px; 
+    }
+
+    .banner img{
+      margin-top: 15px;
+      width: 80%
     }
 
   
