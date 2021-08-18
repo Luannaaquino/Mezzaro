@@ -11,13 +11,13 @@ export const Product = ({title, image, category, price, id}) => {
     <div className="product">
         <a href="#">
             <div className="product_img">
-                <img src={IMG} alt="" width="150" />
+                <img src={image.default} alt={title} width="150" />
             </div>
         </a>
         <div className="product_footer">
-            <h1>Title</h1>
-            <p>Categoria</p>
-            <p className="price">$320</p>
+            <h1>{title}</h1>
+            <p>{category}</p>
+            <p className="price">${price}</p>
             <div className="buttom">
                 <button className="btn1">
                     Adicionar ao Carrinho

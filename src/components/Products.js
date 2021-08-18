@@ -14,11 +14,18 @@ export default function Prodcts() {
     <ProductsContainer>
       <h1 className="title">Produtos</h1>
       <div className="products">
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
+      {
+			produtos.map(produto =>(
+				<Product
+					key={produto.id}
+					title={produto.title}
+					image={produto.image}
+					category={produto.category}
+					price={produto.price}
+				    id={produto.id}
+				/>
+			))
+	  }
       </div>
     </ProductsContainer>
   );
