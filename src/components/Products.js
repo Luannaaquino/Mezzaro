@@ -3,6 +3,7 @@ import 'boxicons';
 import styled from 'styled-components';
 import { DataContext } from '../context/DataProvider';
 import { Product } from './Product';
+import Cart from './Cart';
 
 export default function Prodcts() {
 

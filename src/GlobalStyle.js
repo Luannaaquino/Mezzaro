@@ -63,5 +63,4 @@ body {
     font-family: 'Lato', sans-serif;
 }  
 `;
-
 export default GlobalStyle;

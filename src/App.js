@@ -6,6 +6,7 @@ import GlobalStyle from "./GlobalStyle";
 import ProductsPage from "./pages/ProductsPage";
 import Home from "./pages/Home";
 import { DataProvider } from "./context/DataProvider";
+import Cart from "./components/Cart";
 
 function App() {
   return (

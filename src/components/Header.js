@@ -1,11 +1,16 @@
-import React, { useContext} from "react";
+import React, { useContext, useState} from "react";
 import { DataContext } from "../context/DataProvider";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import Nike from "../images/Nike.jpg"
+import Cart from "./Cart";
+import Modal from "./Modal";
 
 
 export const Header = () => {
+const [isModalVisible, setIsModalVisible] = useState(false);
+const [isLoading, setIsLoading] = useState(false);
+
 
   return (
     <HeaderContainer>
@@ -23,7 +28,8 @@ export const Header = () => {
         </li>
       </ul>
       <div className="cart">
-        <box-icon name="cart"></box-icon>
+        <box-icon name="cart" onClick={()=> setIsModalVisible(true)}></box-icon>
+        {isModalVisible ? <Modal/> : null}
         <span className="item">0</span>
       </div>
     </HeaderContainer>
