@@ -1,10 +1,14 @@
 import React from "react";
 import styled from 'styled-components';
+import 'boxicons';
 
 const Modal = () =>{
     return(
         <ModalStyle>
-            <h1>Teste</h1>
+            <Container>
+                <box-icon name="x"></box-icon>
+                <h1>Teste</h1>
+            </Container>
         </ModalStyle>
     );
 };
@@ -12,21 +16,28 @@ const Modal = () =>{
 export default Modal;
 
 const ModalStyle = styled.div`
-  position: fixed;
-  top: 300px;
-  left: calc(50vw - 20%);
-  background: #333333;
-  border-radius: 20px;
-  width: 50%;
-  max-width: 500px;
-  min-height: 200px;
-  padding: 20px 50px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 5;
-  @media (max-width: 600px) {
-    width: 100%;
-    left: 0;
-    flex-direction: column;
-    border-radius: 0;
-    padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  `
+
+const Container = styled.div`
+  background-color: #fff;
+  color: #000;
+  width: 60%;
+  height: 60%;
+  border-radius: 20px;
+
+  box-icon{
+    outline: none;
+    cursor: pointer;
   }
-`;
+  `
