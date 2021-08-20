@@ -2,11 +2,16 @@ import React from "react";
 import styled from 'styled-components';
 import 'boxicons';
 
-const Modal = () =>{
+const Modal = ({id='modal', onClose= () => {}}) =>{
+
+    const handleOutsideClick = (e) => {
+        if(e.target.id === id) onClose()
+    }
+
     return(
-        <ModalStyle>
+        <ModalStyle id={id} onClick={handleOutsideClick}>
             <Container>
-                <box-icon name="x"></box-icon>
+                <box-icon name="x" onClick={onClose}></box-icon>
                 <h1>Teste</h1>
             </Container>
         </ModalStyle>

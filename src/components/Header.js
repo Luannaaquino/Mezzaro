@@ -29,7 +29,7 @@ const [isLoading, setIsLoading] = useState(false);
       </ul>
       <div className="cart">
         <box-icon name="cart" onClick={()=> setIsModalVisible(true)}></box-icon>
-        {isModalVisible ? <Modal/> : null}
+        {isModalVisible ? <Modal onClose={()=> setIsModalVisible(false)}/> : null}
         <span className="item">0</span>
       </div>
     </HeaderContainer>
