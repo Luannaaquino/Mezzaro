@@ -3,7 +3,6 @@ import { DataContext } from "../context/DataProvider";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import Nike from "../images/Nike.jpg"
-import Cart from "./Cart";
 import Modal from "./Modal";
 
 

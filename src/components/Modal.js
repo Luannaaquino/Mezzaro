@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import 'boxicons';
+import Cart from "./Cart";
 
 const Modal = ({id='modal', onClose= () => {}}) =>{
 
@@ -12,7 +13,7 @@ const Modal = ({id='modal', onClose= () => {}}) =>{
         <ModalStyle id={id} onClick={handleOutsideClick}>
             <Container>
                 <box-icon name="x" onClick={onClose}></box-icon>
-                <h1>Teste</h1>
+                <Cart/>
             </Container>
         </ModalStyle>
     );
