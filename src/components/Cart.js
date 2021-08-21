@@ -121,5 +121,9 @@ const CartContainer = styled.div`
         color: white;
     }
 
-
+    @media (max-width: 1000px) {
+        .carrinho-item{
+            width: 92%;
+        }
+    }
 `

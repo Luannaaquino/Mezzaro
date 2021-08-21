@@ -23,7 +23,7 @@ export default Modal;
 
 const ModalStyle = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 5;
   position: fixed;
@@ -46,4 +46,10 @@ const Container = styled.div`
     outline: none;
     cursor: pointer;
   }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+}
   `
