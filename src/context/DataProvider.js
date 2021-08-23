@@ -42,10 +42,21 @@ export const DataProvider = (props) => {
 		localStorage.setItem('dataCart', JSON.stringify(cart))
 	},[cart])
 
+	useEffect(() =>{
+		const getTotal = () =>{
+			const res = cart.reduce((prev, item) =>{
+				return prev + (item.price * item.cantidad)
+			},0)
+			setTotal(res)
+		}
+		getTotal()
+	},[cart])
+
 	const value = {
 		produtos : [produtos],
 		cart: [cart, setCart],
 		addCart: addCart,
+		total: [total, setTotal]
 	}
 	
 	return (

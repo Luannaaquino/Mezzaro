@@ -1,34 +1,79 @@
 import React, { useContext } from 'react';
 import 'boxicons';
 import styled from 'styled-components';
-import IMG from '../images/img01.jpg'
+import { DataContext } from '../context/DataProvider';
 
 export default function Cart() {
+
+    const value = useContext(DataContext);
+    const [cart, setCart] = value.cart;
+    const [total, setTotal] = value.total
+
+    const removeProduto = id =>{
+		if(window.confirm("Quer remover o produto do carrinho?")){
+			cart.forEach((item, index)=>{
+				if(item.id === id){
+					item.cantidad = 1;
+					cart.splice(index, 1)
+				}
+			})
+			setCart([...cart])
+		}
+	}
+
+    const reduce = id =>{
+		cart.forEach(item =>{
+			if(item.id === id){
+				item.cantidad === 1 ? item.cantidad = 1: item.cantidad -=1;
+			}
+			setCart([...cart])
+		})
+	}
+	const increase = id =>{
+		cart.forEach(item =>{
+			if(item.id === id){
+				item.cantidad +=1;
+			}
+			setCart([...cart])
+		})
+	}
 
     return (
         <CartContainer>
            <div className="Carrinho">
                <h2>Seu Carrinho</h2>
                 <div className="carrinho_center">
+                { 
 
-                <div className="carrinho-item">
-                    <img src={IMG}></img>
+                    cart.length === 0 ? <h2 style={{textAlign: "center", fontSize: "3rem"}}>Carrinho Vazio</h2> : <>
+
+                    { 
+
+                    cart.map((produto) =>(
+
+                    <div className="carrinho-item">
+                    <img src={produto.image.default}></img>
                     <div>
-                        <h3>title</h3>
-                        <p className="price">$340</p>
+                        <h3>{produto.title}</h3>
+                        <p className="price">${produto.price}</p>
                     </div>
                     <div>
-                        <box-icon name="up-arrow" type="solid"></box-icon>
-                        <p className="quantidade">1</p>
-                        <box-icon name="down-arrow" type="solid"></box-icon>
+                        <box-icon name="up-arrow" type="solid" onClick={() => increase(produto.id)}></box-icon>
+                        <p className="quantidade">{produto.cantidad}</p>
+                        <box-icon name="down-arrow" type="solid" onClick={() => reduce(produto.id)} ></box-icon>
                     </div>
                     <div className="remove_item">
-                        <box-icon name="trash"></box-icon>
+                        <box-icon name="trash" onClick={() => removeProduto(produto.id)}></box-icon>
                     </div>
                 </div>
+
+                    ))
+                }
+                </>
+                }
                 </div>
                <div className="carrinho_footer">
-                    <h3>Total</h3>
+                    <h3>{total}</h3>
                     <button className="btn">Payment</button>
                </div>
            </div>

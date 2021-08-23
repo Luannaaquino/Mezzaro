@@ -39,7 +39,7 @@ const Container = styled.div`
   background-color: #fff;
   color: #000;
   width: 60%;
-  height: 60%;
+
   border-radius: 20px;
 
   box-icon{
