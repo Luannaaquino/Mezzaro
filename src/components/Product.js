@@ -1,7 +1,8 @@
 import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "../context/DataProvider";
-import IMG from '../images/img01.jpg'
+import IMG from '../images/img01.jpg';
+
 
 export const Product = ({title, image, category, price, id}) => {
   const value = useContext(DataContext);
