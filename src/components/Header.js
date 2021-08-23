@@ -8,7 +8,8 @@ import Modal from "./Modal";
 
 export const Header = () => {
 const [isModalVisible, setIsModalVisible] = useState(false);
-const [isLoading, setIsLoading] = useState(false);
+const value = useContext(DataContext);
+const [cart] = value.cart;
 
 
   return (
@@ -29,7 +30,7 @@ const [isLoading, setIsLoading] = useState(false);
       <div className="cart">
         <box-icon name="cart" onClick={()=> setIsModalVisible(true)}></box-icon>
         {isModalVisible ? <Modal onClose={()=> setIsModalVisible(false)}/> : null}
-        <span className="item">0</span>
+        <span className="item">{cart.length}</span>
       </div>
     </HeaderContainer>
   );

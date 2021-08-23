@@ -6,7 +6,7 @@ import IMG from '../images/img01.jpg';
 
 export const Product = ({title, image, category, price, id}) => {
   const value = useContext(DataContext);
-  const addCarrito = value.addCarrito;
+  const addCart = value.addCart;
 
   return (
     <div className="product">
@@ -20,7 +20,7 @@ export const Product = ({title, image, category, price, id}) => {
             <p>{category}</p>
             <p className="price">${price}</p>
             <div className="buttom">
-                <button className="btn1">
+                <button className="btn1" onClick={() => addCart(id)}>
                     Adicionar ao Carrinho
                 </button>
                 <button className="btn2"><a href="#" className="btn">Vistar</a></button>

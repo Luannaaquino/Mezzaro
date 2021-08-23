@@ -38,6 +38,10 @@ export const DataProvider = (props) => {
 		}
 	},[])
 
+	useEffect(() =>{
+		localStorage.setItem('dataCart', JSON.stringify(cart))
+	},[cart])
+
 	const value = {
 		produtos : [produtos],
 		cart: [cart, setCart],
