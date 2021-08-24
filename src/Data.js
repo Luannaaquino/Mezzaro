@@ -3,7 +3,7 @@ const data = {
   items: [
     {
       id: 1,
-      title: "Nike LD Waffle Sacai Black Nylon",
+      title: "Nike LD Waffle Sacai Black Nylon (2021)",
       price: 401,
       image: require('./images/img01.jpg'),
       category: "nike",
@@ -33,7 +33,7 @@ const data = {
     },
     {
       id: 4,
-      title: "Nike LD Waffle Sacai White Nylon",
+      title: "Nike LD Waffle Sacai White Nylon (2021)",
       price: 399,
       image: require('./images/img04.jpg'),
       category: "nike",
@@ -73,7 +73,7 @@ const data = {
     },
     {
       id: 8,
-      title: "Nike Air Force 1 Low CLOT Blue Silk",
+      title: "Nike Air Force 1 Low CLOT Blue Silk (2021)",
       price: 335,
       image: require('./images/img08.jpg'),
       category: "nike",

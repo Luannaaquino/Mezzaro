@@ -111,7 +111,7 @@ const ProductsContainer = styled.header`
 
     .buttom button{
         max-width: 250px;
-        margin-left: 32px;
+        margin-left: 20px;
         font-size: 1.2rem;
         color: white;
         font-weight: 600;

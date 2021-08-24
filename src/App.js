@@ -5,8 +5,8 @@ import 'boxicons';
 import GlobalStyle from "./GlobalStyle";
 import ProductsPage from "./pages/ProductsPage";
 import Home from "./pages/Home";
+import ProductPage from "./pages/ProductPage";
 import { DataProvider } from "./context/DataProvider";
-import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -19,6 +19,9 @@ function App() {
           </Route>
           <Route path="/products" exact>
             <ProductsPage />
+          </Route>
+          <Route path="/product/:id" exact>
+            <ProductPage />
           </Route>
       </Switch>
     </Router>
