@@ -47,6 +47,7 @@ export default function ProductPage() {
         <Container>
         {
         <div className="detalhes">
+          <div className="centro">
           <h2>{detalhe.title}</h2>
           <p className="price">${detalhe.price}</p>
           <div className="grid">
@@ -68,6 +69,7 @@ export default function ProductPage() {
           <button onClick={() => addCart(detalhe.id)}>
             Adicionar ao Carrinho
           </button>
+          </div>
           
           {
             url ? <img src={images} alt={detalhe.title}/> : <img src={detalhe.image.default} alt={detalhe.title}/>
@@ -214,6 +216,35 @@ const Container = styled.div`
     font-family: Helvetica, sans-serif
     ;
 }
+
+@media only screen and (max-width: 450px){
+    .detalhes h2{
+        font-size:2rem;
+        padding-top: 10rem ;
+    }
+    .detalhes .grid > .novo, .tamanho{
+    padding: 1rem 1rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    }
+    .detalhes .grid .tamanho select{
+        font-size: 1.2rem;
+    }
+    .detalhes img{
+        width: 300px;
+        width: 100%;
+    }
+    .detalhes{
+        padding: 1rem 0;
+    }
+    .detalhes button{
+        font-size: 1.2rem;
+        margin-bottom: 2rem
+    }
+}
+
 `
 
 const ProductsContainer = styled.header`
